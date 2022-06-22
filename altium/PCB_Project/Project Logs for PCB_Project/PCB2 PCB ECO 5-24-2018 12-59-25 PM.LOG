@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=AD_OUT Pin=AD_HP-1
+Removed Pin From Net: NetName=HP_IN Pin=AD_HP-2
+Removed Pin From Net: NetName=HP_OUT Pin=HP_LP-1
+Removed Pin From Net: NetName=LP_IN Pin=HP_LP-2
+Removed Pin From Net: NetName=LP_OUT Pin=LP_NOTCH-1
+Removed Pin From Net: NetName=NOTCH_IN Pin=LP_NOTCH-2
+Removed Member From Class: ClassName=Sheet1 Member=AD_HP
+Removed Member From Class: ClassName=Sheet1 Member=HP_LP
+Removed Member From Class: ClassName=Sheet1 Member=LP_NOTCH
+Change Component Designator: OldDesignator=JP? NewDesignator=LP-NOTCH
+Added Component: Designator=AD-HP(Header 2X1)
+Added Component: Designator=HP-LP(Header 2X1)
+Added Pin To Net: NetName=AD_OUT Pin=AD-HP-1
+Added Pin To Net: NetName=HP_IN Pin=AD-HP-2
+Added Pin To Net: NetName=HP_OUT Pin=HP-LP-1
+Added Pin To Net: NetName=LP_IN Pin=HP-LP-2
+Added Pin To Net: NetName=LP_OUT Pin=LP-NOTCH-1
+Added Pin To Net: NetName=NOTCH_IN Pin=LP-NOTCH-2
+Added Member To Class: ClassName=Sheet1 Member=Component AD-HP Jumper
+Added Member To Class: ClassName=Sheet1 Member=Component HP-LP Jumper

@@ -1,0 +1,409 @@
+
+**** 05/27/18 11:32:20 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-highpass"  [ D:\projects\ecg pcb\orcad\ecg-pspicefiles\schematic1\highpass.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "highpass.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECG
+X_U1A         N00248 N00331 VCC VEE N00307 TL084
+R_R1         N00262 N00248  16k TC=0,0 
+R_R2         0 N00262  68k TC=0,0 
+R_R3         N00331 N00307  100k TC=0,0 
+R_R4         0 N00331  10k TC=0,0 
+C_C1         N00262 N00307  10n  TC=0,0 
+C_C2         0 N00248  100n  TC=0,0 
+V_V2         0 VEE 10Vdc
+V_V3         VCC 0 10Vdc
+R_R7         N01528 N01510  100k TC=0,0 
+X_U1B         N01462 N01528 VCC VEE N01510 TL084
+R_R8         0 N01528  10k TC=0,0 
+R_R9         N01492 N01510  1000k TC=0,0 
+R_R10         N01462 0  100k TC=0,0 
+C_C3         N00307 N01492  10u  TC=0,0 
+C_C4         N01492 N01462  10u  TC=0,0 
+X_U2B         N02754 N02750 VCC VEE N02734 TL084
+R_R11         N01510 N02738  68k TC=0,0 
+R_R12         N02750 N02734  10k TC=0,0 
+R_R13         N01510 N02750  10k TC=0,0 
+R_R14         0 N02754  68k TC=0,0 
+C_C5         N02734 N02738  47n  TC=0,0 
+C_C6         N01510 N02754  47n  TC=0,0 
+X_U3         N04323 N04332 VCC VEE 0 0 N03815 N03822 AD620/AD
+X_U4A         0 N03853 VCC VEE N03920 TL084
+R_R15         N03853 N03815  22k TC=0,0 
+R_R16         N03853 N03822  22k TC=0,0 
+R_R17         N03822 N03815  10k TC=0,0 
+R_R18         N03853 N04165  10k TC=0,0 
+R_R19         N03853 N03920  1meg TC=0,0 
+R_R20         N03920 0  220k TC=0,0 
+C_C7         N03920 N04165  100n  TC=0,0 
+R_R21         0 N04332  220k TC=0,0 
+R_R22         N04491 N04323  220k TC=0,0 
+V_V4         N04491 0  AC 1m
++SIN 0 1m 100 0 0 0
+
+**** RESUMING highpass.cir ****
+.END
+
+**** 05/27/18 11:32:20 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-highpass"  [ D:\projects\ecg pcb\orcad\ecg-pspicefiles\schematic1\highpass.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DX         X_U3.DY         
+          IS    1.000000E-12    1.000000E-12 
+          BV                   50            
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U1B.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1B.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U2B.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U2B.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U4A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U4A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 05/27/18 11:32:20 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-highpass"  [ D:\projects\ecg pcb\orcad\ecg-pspicefiles\schematic1\highpass.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.QN1        X_U3.QN2        
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18  100.000000E-18 
+          BF   10.000000E+03  250            
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF  700.000000E-18    5.000000E-15 
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 05/27/18 11:32:20 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-highpass"  [ D:\projects\ecg pcb\orcad\ecg-pspicefiles\schematic1\highpass.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U2B.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U2B.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U4A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U4A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 05/27/18 11:32:20 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-highpass"  [ D:\projects\ecg pcb\orcad\ecg-pspicefiles\schematic1\highpass.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   10.0000  (  VEE)  -10.0000  (N00248) 17.64E-06 (N00262) 14.28E-06     
+
+(N00307) 17.56E-06 (N00331) 3.505E-06 (N01462) 21.00E-06 (N01492) 54.51E-06     
+
+(N01510) 54.51E-06 (N01528) 6.864E-06 (N02734)-56.32E-06 (N02738) 54.51E-06     
+
+(N02750) 145.9E-09 (N02754) 14.28E-06 (N03815)    -.6372 (N03822)    -.6373     
+
+(N03853)    -.5378 (N03920)    8.5005 (N04165)    -.5378 (N04323)-141.3E-06     
+
+(N04332)-75.27E-06 (N04491)    0.0000 (X_U3.3)-141.5E-06 (X_U3.4)-75.41E-06     
+
+(X_U3.5)    9.5000 (X_U3.6)    9.5000 (X_U3.9)    -.7487 (X_U3.10)    -.7491    
+
+(X_U3.11)    9.5000                   (X_U3.12)    9.9524                       
+
+(X_U3.13)    -.3744                   (X_U3.14)    -.9936                       
+
+(X_U3.15)    9.9525                   (X_U3.16)    -.3745                       
+
+(X_U3.17)    -.9936                   (X_U3.18)   -1.0155                       
+
+(X_U3.19)    -.7489                   (X_U3.21)-126.5E-06                       
+
+(X_U3.25)   -8.8847                   (X_U3.26)    8.4700                       
+
+(X_U3.27)   -8.6700                   (X_U3.36)-108.3E-06                       
+
+(X_U3.38)-108.3E-12                   (X_U3.40)   -2.4130                       
+
+(X_U3.41)    1.6500                   (X_U3.42)   -1.6500                       
+
+(X_U3.43)   40.4760                   (X_U3.44)    9.4054                       
+
+(X_U3.45)-268.2E-15                   (X_U3.51)    9.3000                       
+
+(X_U3.52)    9.3000                   (X_U3.53)   -9.3000                       
+
+(X_U3.54)   -9.3000                   (X_U3.98)    0.0000                       
+
+(X_U1A.x_tl084.6)-1.657E-09           (X_U1A.x_tl084.7) 17.57E-06               
+
+(X_U1A.x_tl084.8) 17.57E-06           (X_U1A.x_tl084.9)    0.0000               
+
+(X_U1B.x_tl084.6)-5.181E-09           (X_U1B.x_tl084.7) 54.81E-06               
+
+(X_U1B.x_tl084.8) 54.81E-06           (X_U1B.x_tl084.9)    0.0000               
+
+(X_U2B.x_tl084.6) 5.348E-09           (X_U2B.x_tl084.7)-56.60E-06               
+
+(X_U2B.x_tl084.8)-56.60E-06           (X_U2B.x_tl084.9)    0.0000               
+
+(X_U4A.x_tl084.6)  -12.8260           (X_U4A.x_tl084.7)   10.5340               
+
+(X_U4A.x_tl084.8)   10.5340           (X_U4A.x_tl084.9)    0.0000               
+
+(X_U1A.x_tl084.10)     .3992          (X_U1A.x_tl084.11)    9.5747              
+
+(X_U1A.x_tl084.12)    9.5747          (X_U1A.x_tl084.53)    7.6842              
+
+(X_U1A.x_tl084.54)   -7.6842          (X_U1A.x_tl084.90) 140.5E-09              
+
+(X_U1A.x_tl084.91)   40.0000          (X_U1A.x_tl084.92)  -40.0000              
+
+(X_U1A.x_tl084.99)    0.0000          (X_U1B.x_tl084.10)     .3992              
+
+(X_U1B.x_tl084.11)    9.5747          (X_U1B.x_tl084.12)    9.5747              
+
+(X_U1B.x_tl084.53)    7.6842          (X_U1B.x_tl084.54)   -7.6842              
+
+(X_U1B.x_tl084.90) 5.913E-06          (X_U1B.x_tl084.91)   40.0000              
+
+(X_U1B.x_tl084.92)  -40.0000          (X_U1B.x_tl084.99)    0.0000              
+
+(X_U2B.x_tl084.10)     .3992          (X_U2B.x_tl084.11)    9.5747              
+
+(X_U2B.x_tl084.12)    9.5747          (X_U2B.x_tl084.53)    7.6842              
+
+(X_U2B.x_tl084.54)   -7.6842          (X_U2B.x_tl084.90)-5.646E-06              
+
+(X_U2B.x_tl084.91)   40.0000          (X_U2B.x_tl084.92)  -40.0000              
+
+(X_U2B.x_tl084.99)    0.0000          (X_U4A.x_tl084.10)     .1942              
+
+(X_U4A.x_tl084.11)    9.9154          (X_U4A.x_tl084.12)    9.2350              
+
+(X_U4A.x_tl084.53)    7.6842          (X_U4A.x_tl084.54)   -7.6842              
+
+(X_U4A.x_tl084.90)   40.6670          (X_U4A.x_tl084.91)   40.0000              
+
+(X_U4A.x_tl084.92)  -40.0000          (X_U4A.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -8.124E-02
+    V_V3        -2.132E-02
+    V_V4        -6.421E-10
+    X_U3.VIOS   -4.921E-10
+    X_U3.V1     -5.000E-04
+    X_U3.V2      1.067E-11
+    X_U3.V3      1.067E-11
+    X_U3.V12     9.926E-12
+    X_U3.V13     9.926E-12
+    X_U3.V6      1.835E-11
+    X_U3.V7     -4.029E-09
+    X_U3.V4     -5.063E-12
+    X_U3.V5      6.472E+00
+    X_U1A.x_tl084.vb  -1.657E-14
+    X_U1A.x_tl084.vc   7.685E-12
+    X_U1A.x_tl084.ve   7.958E-12
+    X_U1A.x_tl084.vlim   1.405E-10
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+    X_U1B.x_tl084.vb  -5.181E-14
+    X_U1B.x_tl084.vc   7.685E-12
+    X_U1B.x_tl084.ve   7.863E-12
+    X_U1B.x_tl084.vlim   5.913E-09
+    X_U1B.x_tl084.vlp  -4.000E-11
+    X_U1B.x_tl084.vln  -4.000E-11
+    X_U2B.x_tl084.vb   5.348E-14
+    X_U2B.x_tl084.vc   7.685E-12
+    X_U2B.x_tl084.ve   7.958E-12
+    X_U2B.x_tl084.vlim  -5.646E-09
+    X_U2B.x_tl084.vlp  -4.000E-11
+    X_U2B.x_tl084.vln  -4.000E-11
+    X_U4A.x_tl084.vb  -1.283E-04
+    X_U4A.x_tl084.vc  -4.062E-02
+    X_U4A.x_tl084.ve   1.646E-11
+    X_U4A.x_tl084.vlim   4.067E-02
+    X_U4A.x_tl084.vlp   1.286E-04
+    X_U4A.x_tl084.vln  -8.067E-11
+
+    TOTAL POWER DISSIPATION  -9.56E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/27/18 11:32:20 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-highpass"  [ D:\projects\ecg pcb\orcad\ecg-pspicefiles\schematic1\highpass.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .75
+

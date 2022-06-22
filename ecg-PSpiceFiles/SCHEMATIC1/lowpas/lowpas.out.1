@@ -1,0 +1,215 @@
+
+**** 12/17/16 02:44:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lowpas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1 0 .01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECG
+X_U1A         N00255 N00259 VCC VEE N00204 TL084
+R_R1         N00259 N00204  100k TC=0,0 
+R_R2         N00216 N00255  13k TC=0,0 
+R_R3         N00427 N00216  100k TC=0,0 
+C_C1         GND N00255  100n  TC=0,0 
+C_C2         N00204 N00216  10n  TC=0,0 
+R_R4         GND N00259  10k TC=0,0 
+V_V2         VCC N00489 5
+V_V3         N00489 VEE 5
+V_V4         N00427 GND  AC 1m
++SIN 0 1m 2 0 0 0
+
+**** RESUMING lowpas.cir ****
+.END
+
+**** 12/17/16 02:44:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 12/17/16 02:44:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 12/17/16 02:44:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  GND)-23.58E+06  (  VCC)-23.58E+06  (  VEE)-23.58E+06  (N00204)-23.58E+06     
+
+(N00216)-23.58E+06 (N00255)-23.58E+06 (N00259)-23.58E+06 (N00427)-23.58E+06     
+
+(N00489)-23.58E+06 (X_U1A.x_tl084.6)-28.07E-06                                  
+
+(X_U1A.x_tl084.7)-23.58E+06           (X_U1A.x_tl084.8)-23.58E+06               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)-23.58E+06              
+
+(X_U1A.x_tl084.11)-23.58E+06          (X_U1A.x_tl084.12)-23.58E+06              
+
+(X_U1A.x_tl084.53)-23.58E+06          (X_U1A.x_tl084.54)-23.58E+06              
+
+(X_U1A.x_tl084.90)-68.92E-06          (X_U1A.x_tl084.91)   40.0000              
+
+(X_U1A.x_tl084.92)  -40.0000          (X_U1A.x_tl084.99)-23.58E+06          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.716E-03
+    V_V3        -7.716E-03
+    V_V4         2.051E-10
+    X_U1A.x_tl084.vb  -2.804E-10
+    X_U1A.x_tl084.vc   2.401E-12
+    X_U1A.x_tl084.ve   5.466E-07
+    X_U1A.x_tl084.vlim  -6.892E-08
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   7.72E-02  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  100.0E-06.
+         Time step =  88.82E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(N00259)                 =   -24.47MV  \   -23.58MV
+    V(N00255)                 =   -24.56MV  \   -23.58MV
+    V(N00427)                 =   -24.56MV  \   -23.58MV
+    V(GND)                    =   -24.56MV  \   -23.58MV
+    V(X_U1A.x_tl084.6)        =     1.371V  \   317.83uV
+    V(X_U1A.x_tl084.10)       =   -24.51MV  \   -23.58MV
+    V(X_U1A.x_tl084.90)       =    44.25KV  \   -11.55mV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.x_tl084.egnd)     =    -44.97A  \    9.331uA
+    I(V_V2)                   =   375.72mA  \   -7.824mA
+    I(V_V3)                   =   375.72mA  \   -7.824mA
+    I(X_U1A.x_tl084.vb)       =    14.10uA  \    3.121nA
+    I(X_U1A.x_tl084.vc)       =   351.35mA  \   110.41uA
+    I(X_U1A.x_tl084.ve)       =  -383.43mA  \   108.22uA
+    I(X_U1A.x_tl084.vlim)     =     44.25A  \   -11.55uA
+    I(X_U1A.x_tl084.vlp)      =    44.21nA  \   -40.01pA
+    I(X_U1A.x_tl084.vln)      =   -44.29nA  \   -39.99pA
+    I(X_U1A.x_tl084.hlim)     =   -88.50nA  \    23.11fA
+
+  These devices failed to converge:
+    X_U1A.x_tl084.dlp X_U1A.x_tl084.fb X_U1A.x_tl084.j1 X_U1A.x_tl084.j2 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  GND)-24.56E+06  (  VCC)-23.58E+06  (  VEE)-23.58E+06  (N00204)-23.58E+06     
+
+(N00216)-23.58E+06 (N00255)-24.56E+06 (N00259)-24.47E+06 (N00427)-24.56E+06     
+
+(N00489)-23.58E+06 (X_U1A.x_tl084.6)    1.3710                                  
+
+(X_U1A.x_tl084.7)-23.58E+06           (X_U1A.x_tl084.8)-23.58E+06               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)-24.51E+06              
+
+(X_U1A.x_tl084.11)-23.58E+06          (X_U1A.x_tl084.12)-23.58E+06              
+
+(X_U1A.x_tl084.53)-23.58E+06          (X_U1A.x_tl084.54)-23.58E+06              
+
+(X_U1A.x_tl084.90) 44.25E+03          (X_U1A.x_tl084.91)   40.0000              
+
+(X_U1A.x_tl084.92)  -40.0000          (X_U1A.x_tl084.99)-23.58E+06          
+
+
+**** Interrupt ****

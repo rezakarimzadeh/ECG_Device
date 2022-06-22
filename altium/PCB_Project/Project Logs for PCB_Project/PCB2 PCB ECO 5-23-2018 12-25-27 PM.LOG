@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=VCC Pin=source-1
+Removed Pin From Net: NetName=GND Pin=source-2
+Removed Pin From Net: NetName=VEE Pin=source-3
+Removed Member From Class: ClassName=Sheet1 Member=source
+Change Component Comment : Designator=C1 Old Comment=10n New Comment=100n
+Added Component: Designator=J1(KF300-3 PIN)
+Added Component: Designator=JP?(Header 2X1)
+Added Pin To Net: NetName=VEE Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Pin To Net: NetName=VCC Pin=J1-3
+Added Member To Class: ClassName=Sheet1 Member=Component J1 TBlock-3
+Added Member To Class: ClassName=Sheet1 Member=Component JP? Jumper
+Added Room: Name=Sheet1

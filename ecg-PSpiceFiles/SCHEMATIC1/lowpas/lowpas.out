@@ -1,0 +1,356 @@
+
+**** 12/17/16 04:18:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lowpas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 .01 200
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECG
+V_V2         VCC 0 10
+V_V3         0 VEE 10
+R_R8         0 N01557  10k TC=0,0 
+R_R5         N01557 N01499  100k TC=0,0 
+X_U1B         N01553 N01557 VCC VEE N01499 TL084
+R_R9         N01535 N01499  470k TC=0,0 
+C_C3         N01605 N01535  10u  TC=0,0 
+C_C4         N01535 N01553  10u  TC=0,0 
+R_R10         0 N01553  150k TC=0,0 
+R_R1         N02748 N01605  100k TC=0,0 
+C_C2         N01605 N02726  10n  TC=0,0 
+X_U1A         N02744 N02748 VCC VEE N01605 TL084
+R_R2         N02726 N02744  13k TC=0,0 
+R_R3         N02796 N02726  100k TC=0,0 
+C_C1         0 N02744  100n  TC=0,0 
+R_R4         0 N02748  10k TC=0,0 
+X_U1C         N03235 N03294 VCC VEE N03321 TL084
+R_R11         N01499 N03249  68k TC=0,0 
+R_R12         N03294 N03321  10k TC=0,0 
+R_R13         N01499 N03294  10k TC=0,0 
+R_R14         0 N03235  68k TC=0,0 
+C_C5         N03321 N03249  47n  TC=0,0 
+C_C6         N01499 N03235  47n  TC=0,0 
+X_U2         N05572 0 VCC VEE N02796 0 N05434 N05472 AD620/AD
+R_R15         N05472 N05434  6.8k TC=0,0 
+V_V5         N05572 0  AC 1m
++SIN 0 1m 2 0 0 0
+
+**** RESUMING lowpas.cir ****
+.END
+
+**** 12/17/16 04:18:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.DX         X_U2.DY         
+          IS    1.000000E-12    1.000000E-12 
+          BV                   50            
+
+
+               X_U1B.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1B.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U1C.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1C.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 12/17/16 04:18:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.QN1        X_U2.QN2        
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18  100.000000E-18 
+          BF   10.000000E+03  250            
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF  700.000000E-18    5.000000E-15 
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 12/17/16 04:18:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1C.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1C.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 12/17/16 04:18:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   10.0000  (  VEE)  -10.0000  (N01499) 203.4E-06 (N01535) 203.4E-06     
+
+(N01553) 34.73E-06 (N01557) 20.60E-06 (N01605)     .0037 (N02726) 347.8E-06     
+
+(N02744) 350.8E-06 (N02748) 336.7E-06 (N02796) 324.6E-06 (N03235) 15.74E-06     
+
+(N03249) 203.4E-06 (N03294) 1.613E-06 (N03321)-202.5E-06 (N05434)    -.6372     
+
+(N05472)    -.6372 (N05572)    0.0000 (X_U2.3)-249.2E-09 (X_U2.4)-129.2E-09     
+
+(X_U2.5)    9.5000 (X_U2.6)    9.5000 (X_U2.9)    -.6372 (X_U2.10)    -.6371    
+
+(X_U2.11)    9.5000                   (X_U2.12)    9.9524                       
+
+(X_U2.13)    -.3185                   (X_U2.14)    -.9376                       
+
+(X_U2.15)    9.9524                   (X_U2.16)    -.3185                       
+
+(X_U2.17)    -.9376                   (X_U2.18)    -.9595                       
+
+(X_U2.19)    -.6369                   (X_U2.21) 14.75E-06                       
+
+(X_U2.25)    1.3272                   (X_U2.26)    8.4700                       
+
+(X_U2.27)   -8.6700                   (X_U2.36)    0.0000                       
+
+(X_U2.38)    0.0000                   (X_U2.40)    1.3272                       
+
+(X_U2.41)    1.6503                   (X_U2.42)   -1.6497                       
+
+(X_U2.43)    9.4208                   (X_U2.44)   40.4600                       
+
+(X_U2.45) 324.7E-06                   (X_U2.51)    9.3000                       
+
+(X_U2.52)    9.3000                   (X_U2.53)   -9.3000                       
+
+(X_U2.54)   -9.3000                   (X_U2.98)    0.0000                       
+
+(X_U1A.x_tl084.6)-347.1E-09           (X_U1A.x_tl084.7)     .0037               
+
+(X_U1A.x_tl084.8)     .0037           (X_U1A.x_tl084.9)    0.0000               
+
+(X_U1B.x_tl084.6)-19.34E-09           (X_U1B.x_tl084.7) 204.5E-06               
+
+(X_U1B.x_tl084.8) 204.5E-06           (X_U1B.x_tl084.9)    0.0000               
+
+(X_U1C.x_tl084.6) 19.24E-09           (X_U1C.x_tl084.7)-203.5E-06               
+
+(X_U1C.x_tl084.8)-203.5E-06           (X_U1C.x_tl084.9)    0.0000               
+
+(X_U1A.x_tl084.10)     .3995          (X_U1A.x_tl084.11)    9.5747              
+
+(X_U1A.x_tl084.12)    9.5747          (X_U1A.x_tl084.53)    7.6842              
+
+(X_U1A.x_tl084.54)   -7.6842          (X_U1A.x_tl084.90) 33.43E-06              
+
+(X_U1A.x_tl084.91)   40.0000          (X_U1A.x_tl084.92)  -40.0000              
+
+(X_U1A.x_tl084.99)    0.0000          (X_U1B.x_tl084.10)     .3992              
+
+(X_U1B.x_tl084.11)    9.5747          (X_U1B.x_tl084.12)    9.5747              
+
+(X_U1B.x_tl084.53)    7.6842          (X_U1B.x_tl084.54)   -7.6842              
+
+(X_U1B.x_tl084.90) 22.01E-06          (X_U1B.x_tl084.91)   40.0000              
+
+(X_U1B.x_tl084.92)  -40.0000          (X_U1B.x_tl084.99)    0.0000              
+
+(X_U1C.x_tl084.10)     .3992          (X_U1C.x_tl084.11)    9.5747              
+
+(X_U1C.x_tl084.12)    9.5747          (X_U1C.x_tl084.53)    7.6842              
+
+(X_U1C.x_tl084.54)   -7.6842          (X_U1C.x_tl084.90)-20.41E-06              
+
+(X_U1C.x_tl084.91)   40.0000          (X_U1C.x_tl084.92)  -40.0000              
+
+(X_U1C.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -5.728E-02
+    V_V3        -4.666E-02
+    V_V5        -6.230E-10
+    X_U2.VIOS   -4.730E-10
+    X_U2.V1     -5.000E-04
+    X_U2.V2      3.142E-11
+    X_U2.V3      3.142E-11
+    X_U2.V12     2.940E-11
+    X_U2.V13     2.940E-11
+    X_U2.V6      2.359E-11
+    X_U2.V7      3.261E-11
+    X_U2.V4     -2.022E-12
+    X_U2.V5     -1.041E-11
+    X_U1B.x_tl084.vb  -1.934E-13
+    X_U1B.x_tl084.vc   2.430E-11
+    X_U1B.x_tl084.ve   2.410E-11
+    X_U1B.x_tl084.vlim   2.201E-08
+    X_U1B.x_tl084.vlp  -1.265E-10
+    X_U1B.x_tl084.vln  -1.265E-10
+    X_U1A.x_tl084.vb  -3.471E-12
+    X_U1A.x_tl084.vc   2.429E-11
+    X_U1A.x_tl084.ve   2.411E-11
+    X_U1A.x_tl084.vlim   3.343E-08
+    X_U1A.x_tl084.vlp  -1.265E-10
+    X_U1A.x_tl084.vln  -1.265E-10
+    X_U1C.x_tl084.vb   1.924E-13
+    X_U1C.x_tl084.vc   2.430E-11
+    X_U1C.x_tl084.ve   2.446E-11
+    X_U1C.x_tl084.vlim  -2.041E-08
+    X_U1C.x_tl084.vlp  -1.265E-10
+    X_U1C.x_tl084.vln  -1.265E-10
+
+    TOTAL POWER DISSIPATION   1.04E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/17/16 04:18:21 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lowpas"  [ C:\Cadence\SPB_16.6\tools\capture\ecg-PSpiceFiles\SCHEMATIC1\lowpas.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+
